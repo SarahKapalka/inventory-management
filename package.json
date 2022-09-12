@@ -1,0 +1,39 @@
+{
+  "name": "inventory-management-system",
+  "version": "1.0.0",
+  "description": "Stock manangement application made with electron and react",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "watch": "webpack --config webpack.common.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahKapalka/Inventory-Management-System.git"
+  },
+  "author": "Ebrima C Jalloh, Omar Keita, Sarah Kapalka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarahKapalka/Inventory-Management-System/issues"
+  },
+  "homepage": "https://github.com/SarahKapalka/Inventory-Management-System#readme",
+  "dependencies": {
+    "electron": "^20.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "sass": "^1.54.9",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
