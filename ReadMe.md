@@ -14,4 +14,4 @@ npm start
 Use ./src/js/index.css for styling
 you can also change the file to index.sass 
 sass is also set up 👍
-Good Luck!!
+Good Luck!!!
