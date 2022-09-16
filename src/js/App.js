@@ -1,10 +1,12 @@
+
 import React from 'react';
+import Main from './Main';
 
 export default function App(){
     return(
-        <>
-        <h1>I am an App Component</h1>
-        <button>Button</button>
-        </>
+        <div className='container'>
+        <h1>Store Inventory Management</h1>
+        <Main/>
+        </div>
     )
 }
