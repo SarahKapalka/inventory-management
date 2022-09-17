@@ -1,6 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+import Add from "./Add";
+import Transfer from "./Transfer";
+import Remove from "./remove";
+import Search from "./Search";
+
 
 
 const Main = () =>{
@@ -18,41 +23,18 @@ const Main = () =>{
             )
         case "add":
             return (
-            <div className="form">
-            <form action="#">
-                <input type="text" name="item" required className="input-text" placeholder="Item name"/>
-                <input type="text" name="model" required className="input-text" placeholder="Item model"/>
-                <select name="store-location" required className="input-select">
-                 <option value="" disabled selected hidden required className="option">Choose a store</option>
-                 <option value="store-one" className="option">store one</option>
-                 <option value="store-two" className="option">store two</option>
-                </select>
-                <label>Amount:<input type="number" min="1" max="999" defaultValue="1" className="input-number"/></label>
-                <input type="submit" className="input-button"/>
-                <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
-            </form>
-            </div>
+                <div className="form">
+                <form action="#">
+                    <Add/>
+                    <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
+                </form>
+                </div>
         )
         case "transfer":
             return (
                 <div className="form">
                 <form action="#">
-                    <input type="text" name="item" required className="input-text" placeholder="Item name"/>
-                    <input type="text" name="model" required className="input-text" placeholder="Item model"/>
-                    <p>From :</p>
-                    <select name="store-location" required className="input-select">
-                     <option value="" disabled selected hidden required className="option">Choose a store</option>
-                     <option value="store-one" className="option">store one</option>
-                     <option value="store-two" className="option">store two</option>
-                    </select>
-                    <p>To :</p>
-                    <select name="store-location" required className="input-select">
-                     <option value="" disabled selected hidden required className="option">Choose a store</option>
-                     <option value="store-one" className="option">store one</option>
-                     <option value="store-two" className="option">store two</option>
-                    </select>
-                    <label>Amount:<input type="number" min="1" max="999" defaultValue="1" className="input-number"/></label>
-                    <input type="submit" className="input-button" value="transfer"/>
+                    <Transfer/>
                     <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
             </div>)
@@ -60,15 +42,7 @@ const Main = () =>{
             return (
             <div className="form">
                 <form action="#">
-                <input type="text" name="item" required className="input-text" placeholder="Item name"/>
-                <input type="text" name="model" required className="input-text" placeholder="Item model"/>
-                <select name="store-location" required className="input-select">
-                 <option value="" disabled selected hidden required className="option">Store to remove from</option>
-                 <option value="store-one" className="option">store one</option>
-                 <option value="store-two" className="option">store two</option>
-                </select>
-                <label>Amount:<input type="number" min="1" max="999" defaultValue="1" className="input-number"/></label>
-                <input type="submit" className="input-button" value="remove"/>
+                <Remove/>
                 <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
             </div>
@@ -76,8 +50,7 @@ const Main = () =>{
         case "search":
             return (
             <div className="form">
-                <input type="text" name="search" required className="input-text" placeholder="search for item"/>
-                    <button className="input-search">Search</button>
+                <Search/>
                 <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
             </div>
             )
