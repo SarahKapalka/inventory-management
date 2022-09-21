@@ -15,10 +15,10 @@ const Main = () =>{
         case "main":
             return (
             <div id='main-menu'>
-                <button className='main-button' onClick={()=>{setpage("search")}}>search for store</button>
-                <button className='main-button' onClick={()=>{setpage("add")}}>add to store</button> 
-                <button className='main-button' onClick={()=>{setpage("transfer")}}>transfer between stores</button> 
-                <button className='main-button' onClick={()=>{setpage("remove")}}>remove from store</button>     
+                <button className='main-button' onClick={()=>{setpage("search")}}>search for an item</button>
+                <button className='main-button' onClick={()=>{setpage("add")}}>add to store</button>
+                <button className='main-button' onClick={()=>{setpage("transfer")}}>transfer to shop</button>
+                <button className='main-button' onClick={()=>{setpage("remove")}}>remove from store</button>
             </div>
             )
         case "add":

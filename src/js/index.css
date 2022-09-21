@@ -1,8 +1,19 @@
-/*
+
 h1{
     color:blue
 }
-button, input, label{
-    display: block
+h2 {
+  color: rgb(255, 30, 0);
 }
-*/
+h3 {
+  color: rgb(255, 174, 0);
+}
+
+h4 {
+  color: rgb(9, 255, 0);
+}
+
+button, input, label{
+display: block;
+
+}
