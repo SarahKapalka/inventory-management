@@ -10,7 +10,22 @@ import Search from "./Search";
 
 const Main = () =>{
     const [page, setpage] = useState("main") ;
-    console.log(page)
+    const [item, setItem] = useState("");
+    const [model, setModel] = useState("");
+    const [tostore, setTostore] = useState("");
+    const [fromstore, setFromstore] = useState("");
+    const [amount, setAmount] =useState(1);
+
+    const handleSubmit=(e)=>{
+       e.preventDefault()
+       switch(page){
+        case "add":
+            return console.log(`Have added ${amount} ${item}(s) of model ${model} to ${tostore}`)
+        case "transfer":
+            return console.log(`Have transfered ${amount} ${item}(s) of model ${model} from ${fromstore} to ${tostore}`)
+       }
+    }
+
     switch(page){
         case "main":
             return (
@@ -24,8 +39,8 @@ const Main = () =>{
         case "add":
             return (
                 <div className="form">
-                <form action="#">
-                    <Add/>
+                <form action="#" onSubmit={handleSubmit}>
+                    <Add item={item} model={model} tostore={tostore} amount={amount} setItem={setItem} setModel={setModel} setTostore={setTostore} setAmount={setAmount}/>
                     <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
                 </div>
@@ -33,8 +48,8 @@ const Main = () =>{
         case "transfer":
             return (
                 <div className="form">
-                <form action="#">
-                    <Transfer/>
+                <form action="#" onSubmit={handleSubmit}>
+                    <Transfer item={item} model={model} tostore={tostore} amount={amount} setItem={setItem} setModel={setModel} setTostore={setTostore} setAmount={setAmount} fromstore={fromstore} setFromstore={setFromstore}/>
                     <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
             </div>)
@@ -42,7 +57,7 @@ const Main = () =>{
             return (
             <div className="form">
                 <form action="#">
-                <Remove/>
+                <Remove item={item} model={model} fromstore={fromstore} amount={amount} setItem={setItem} setModel={setModel} setFromstore={setFromstore} setAmount={setAmount}/>
                 <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
             </div>
