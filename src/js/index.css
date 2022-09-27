@@ -1,13 +1,53 @@
+.container, body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#main-menu, form{
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  gap: 10px;
 
+}
 h1{
     color:rgb(238, 238, 245);
     background-color: rgb(20, 20, 143);
+    padding: 25px;
+    margin:0;
+    width: auto;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 h2 {
   color: rgb(20, 20, 143);
+  padding-left: 25px;
+  font-size: 1.25rem;
+  margin:0;
+  width: auto;
+  border-bottom: solid 2px rgb(20, 20, 143);
+  padding: 10px 0 10px 25px;
+  margin-bottom: 50px;
 }
 
-button, input, label{
+button, input, label, select{
 display: block;
+height: 30px;
+padding: 5px 8px;
+}
+.input-button{
+  margin-top:50px
+}
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#main-menu button{
+ height: 50px;
+ font-size: 1.25rem;
+ 
 }

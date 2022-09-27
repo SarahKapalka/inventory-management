@@ -6,8 +6,6 @@ import Transfer from "./Transfer";
 import Remove from "./remove";
 import Search from "./Search";
 
-
-
 const Main = () =>{
     const [page, setpage] = useState("main") ;
     const [item, setItem] = useState("");
@@ -15,7 +13,7 @@ const Main = () =>{
     const [tostore, setTostore] = useState("");
     const [fromstore, setFromstore] = useState("");
     const [amount, setAmount] =useState(1);
-
+    
     const handleSubmit=(e)=>{
        e.preventDefault()
        switch(page){
@@ -23,6 +21,9 @@ const Main = () =>{
             return console.log(`Have added ${amount} ${item}(s) of model ${model} to ${tostore}`)
         case "transfer":
             return console.log(`Have transfered ${amount} ${item}(s) of model ${model} from ${fromstore} to ${tostore}`)
+        case "remove":
+            return console.log(`Have removed ${amount} ${item}(s) of model ${model} from ${fromstore}`)
+
        }
     }
 
@@ -56,7 +57,7 @@ const Main = () =>{
         case "remove":
             return (
             <div className="form">
-                <form action="#">
+                <form action="#" onSubmit={handleSubmit}>
                 <Remove item={item} model={model} fromstore={fromstore} amount={amount} setItem={setItem} setModel={setModel} setFromstore={setFromstore} setAmount={setAmount}/>
                 <button className="return-button" onClick={()=>{setpage("main")}}>Return</button>
                 </form>
